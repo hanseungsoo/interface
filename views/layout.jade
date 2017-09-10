@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='stylesheets/style.css')
+    link(rel='stylesheet', href='stylesheets/layout.css')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", type="text/javascript")
+    script(src="javascripts/canvasjs.min.js", type="text/javascript")
+    script(src="javascripts/mainChart.js", type="text/javascript")
+  body(id='top')
+    include top    
+    block content
+    include footer

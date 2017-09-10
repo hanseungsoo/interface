@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  - console.log(adtInfo)
+  form(action='/tcp/closeTcpServer', method='post')
+    fieldset
+      legend 정보출력
+      label(for='outputADT') ADT 이름 : 
+      div(name='outputADT') #{adtInfo.adtName}
+      br
+      label(for='outputPort') PORT : 
+      div(name='outputPort') #{adtInfo.adtPort}
+      br
+      input(type='hidden' name='outputADT' value='#{adtInfo.adtName}')
+      input(type='hidden' name='outputPort' value='#{adtInfo.adtPort}')
+      input(type='submit' value='종료')

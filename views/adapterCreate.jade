@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  script(src="javascripts/adapterUtil.js", type="text/javascript")
+  div(class='wrapper row3')
+    main(class='hoc container clear')
+      include adapterList
+      div(class='content three_quarter')
+        div(class='wrapper row3')
+          //- form(action='/tcp/setTcpServer', method='post')
+          fieldset
+            legend 정보입력
+            label(for='inputADT') ADT 이름 :
+            input(id ='inputADT' name='adt')
+            br
+            label(for='inputPort') PORT :
+            input(id ='inputPort' name='port')
+            br
+            label(for='inputIp') IP :
+            input(id ='inputIp' name='ip')
+            br
+            input(id = 'createButton' type='button' value='생성')
+            input(type='button' value='종료' onclick="location.href='/tcp/closeTcpServer'")
